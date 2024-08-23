@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import SliderProvider from "@/components/slider";
 
 export default function ClientPage() {
   const [order, setOrder] = useState({
@@ -42,7 +43,7 @@ export default function ClientPage() {
 
   return (
     <div>
-      <h1>Client - Make an Order</h1>
+      {/* <h1>Client - Make an Order</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -76,7 +77,8 @@ export default function ClientPage() {
           required
         />
         <button type="submit">Submit Order</button>
-      </form>
+      </form> */}
+      <SliderProvider />
     </div>
   );
 }
