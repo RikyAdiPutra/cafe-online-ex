@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import SliderProvider from "@/components/slider";
+import { signIn } from "next-auth/react";
 
 export default function ClientPage() {
   const [order, setOrder] = useState({
@@ -78,7 +79,13 @@ export default function ClientPage() {
         />
         <button type="submit">Submit Order</button>
       </form> */}
-      <SliderProvider />
+      {/* <SliderProvider /> */}
+      <button
+        onClick={signIn()}
+        className="border border-black p-2 text-white bg-black"
+      >
+        Login
+      </button>
     </div>
   );
 }
